@@ -25,10 +25,16 @@ const UserSchema = new mongoose.Schema(
         required: true,
         min: 5,
       },
-      picturePath: {
+      profileImage: {
         type: String,
-        default: "",
+        default: "profile.jpg",
       },
+      savedBooks: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Book",
+      },
+      ],
     },
     { timestamps: true }
 );

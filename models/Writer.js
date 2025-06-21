@@ -6,6 +6,7 @@ const WriterSchema = new mongoose.Schema(
     bio: String,
     birthDate: Date,
     nationality: String,
+    profileImage: { type: String, default: "profile.jpg"},
   },
   { timestamps: true }
 );

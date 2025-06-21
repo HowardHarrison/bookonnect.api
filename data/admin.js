@@ -1,4 +1,3 @@
-// data/admin.js
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import Admin from "../models/Admin.js";
