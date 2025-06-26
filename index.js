@@ -14,6 +14,7 @@ import { books, categories, writers } from "./data/index.js";
 import Category from "./models/Category.js";
 import Book from "./models/Book.js";
 import { seedUser } from "./data/user.js";
+import bookRoutes from './routes/book.js'
 
 /* CONFIGURATIONS */
 const __filename = fileURLToPath(import.meta.url);
@@ -28,6 +29,9 @@ app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 app.use("/assets", express.static(path.join(__dirname, "public/assets")));
+
+// routes
+app.use('/books', bookRoutes);
 
 /* FILE STORAGE */
 const storage = multer.diskStorage({
@@ -54,4 +58,4 @@ mongoose.connect(process.env.MONGO_URL)
     // Book.insertMany(books);
     // await seedUser();
   })
-  .catch((error) => console.log(`${error} did not connect`));  
+  .catch((error) => console.log(`${error} did not connect`));    
