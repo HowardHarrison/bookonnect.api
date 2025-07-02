@@ -16,6 +16,7 @@ import Book from "./models/Book.js";
 import { seedUser } from "./data/user.js";
 import bookRoutes from './routes/book.js'
 import authRoutes from './routes/auth.js'
+import reactionRoutes from './routes/reaction.js'
 import Reaction from "./models/Reaction.js";
 import { reaction } from "./data/reaction.js";
 
@@ -36,6 +37,7 @@ app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 // routes
 app.use('/books', bookRoutes);
 app.use('/', authRoutes);
+app.use('/reactions', reactionRoutes);
 
 /* FILE STORAGE */
 const storage = multer.diskStorage({
