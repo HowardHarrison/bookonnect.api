@@ -15,6 +15,9 @@ import Category from "./models/Category.js";
 import Book from "./models/Book.js";
 import { seedUser } from "./data/user.js";
 import bookRoutes from './routes/book.js'
+import authRoutes from './routes/auth.js'
+import Reaction from "./models/Reaction.js";
+import { reaction } from "./data/reaction.js";
 
 /* CONFIGURATIONS */
 const __filename = fileURLToPath(import.meta.url);
@@ -32,6 +35,7 @@ app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
 // routes
 app.use('/books', bookRoutes);
+app.use('/', authRoutes);
 
 /* FILE STORAGE */
 const storage = multer.diskStorage({
@@ -56,6 +60,7 @@ mongoose.connect(process.env.MONGO_URL)
     // Writer.insertMany(writers);
     // Category.insertMany(categories);
     // Book.insertMany(books);
+    //Reaction.insertMany(reaction);
     // await seedUser();
   })
   .catch((error) => console.log(`${error} did not connect`));    
