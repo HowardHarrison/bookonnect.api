@@ -17,8 +17,11 @@ import { seedUser } from "./data/user.js";
 import bookRoutes from './routes/book.js'
 import authRoutes from './routes/auth.js'
 import reactionRoutes from './routes/reaction.js'
+import reviewRoutes from './routes/review.js'
 import Reaction from "./models/Reaction.js";
 import { reaction } from "./data/reaction.js";
+import Review from "./models/Review.js";
+import { review } from "./data/review.js";
 
 /* CONFIGURATIONS */
 const __filename = fileURLToPath(import.meta.url);
@@ -38,6 +41,7 @@ app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 app.use('/books', bookRoutes);
 app.use('/', authRoutes);
 app.use('/reactions', reactionRoutes);
+app.use('/reviews', reviewRoutes);
 
 /* FILE STORAGE */
 const storage = multer.diskStorage({
@@ -63,6 +67,7 @@ mongoose.connect(process.env.MONGO_URL)
     // Category.insertMany(categories);
     // Book.insertMany(books);
     //Reaction.insertMany(reaction);
+    //Review.insertMany(review);
     // await seedUser();
   })
   .catch((error) => console.log(`${error} did not connect`));    
