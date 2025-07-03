@@ -24,7 +24,9 @@ export const upsertReview = async (req, res) => {
 export const getReviewsByBook = async (req, res) => {
   const { bookId } = req.params;
   try {
-    const reviews = await Review.find({ bookId }).populate("userId", "name");
+    const reviews = await Review.find({ bookId })
+      .populate("userId", "firstName profileImage") 
+      .sort({ createdAt: -1 });
     res.status(200).json(reviews);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -44,7 +46,7 @@ export const getUserReview = async (req, res) => {
 
 // Delete your review
 export const deleteReview = async (req, res) => {
-  const { userId, bookId } = req.body;
+  const { userId, bookId } = req.query;
   try {
     await Review.findOneAndDelete({ userId, bookId });
     res.status(200).json({ message: "Review deleted" });
