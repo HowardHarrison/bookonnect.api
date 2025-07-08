@@ -18,6 +18,7 @@ import bookRoutes from './routes/book.js'
 import authRoutes from './routes/auth.js'
 import reactionRoutes from './routes/reaction.js'
 import reviewRoutes from './routes/review.js'
+import userRoutes from './routes/user.js'
 import Reaction from "./models/Reaction.js";
 import { reaction } from "./data/reaction.js";
 import Review from "./models/Review.js";
@@ -42,6 +43,7 @@ app.use('/books', bookRoutes);
 app.use('/', authRoutes);
 app.use('/reactions', reactionRoutes);
 app.use('/reviews', reviewRoutes);
+app.use('/users', userRoutes);
 
 /* FILE STORAGE */
 const storage = multer.diskStorage({
