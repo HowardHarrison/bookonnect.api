@@ -9,9 +9,9 @@ export const register = async (req, res) => {
             firstName,
             lastName,
             email,
-            password,
-            picturePath,
+            password
         } = req.body;
+        const profileImage = req.file ? req.file.filename : "profile.jpg";
       
         const salt = await bcrypt.genSalt();
         const passwordHash = await bcrypt.hash(password, salt);
@@ -21,12 +21,13 @@ export const register = async (req, res) => {
             lastName,
             email,
             password: passwordHash,
-            picturePath,
+            profileImage,
           });
           const savedUser = await newUser.save();
           res.status(201).json(savedUser);
     } catch (err) {
         res.status(500).json({ error: err.message });
+        console.log('err',err);
     }
 }
 
