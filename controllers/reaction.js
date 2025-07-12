@@ -37,7 +37,8 @@ export const getReactionStatus = async (req, res) => {
 
   try {
     const reaction = await Reaction.findOne({ userId, bookId });
-    res.status(200).json({ reacted: !!reaction });
+    const totalReactions = await Reaction.countDocuments({ bookId });
+    res.status(200).json({ reacted: !!reaction, totalReactions });
   } catch (error) {
     console.error('Error getting reaction status:', error.message);
     res.status(500).json({ message: 'Server error' });
