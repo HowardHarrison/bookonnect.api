@@ -37,11 +37,25 @@ export const getReactionStatus = async (req, res) => {
 
   try {
     const reaction = await Reaction.findOne({ userId, bookId });
-    const totalReactions = await Reaction.countDocuments({ bookId });
-    res.status(200).json({ reacted: !!reaction, totalReactions });
+    res.status(200).json({ reacted: !!reaction });
   } catch (error) {
     console.error('Error getting reaction status:', error.message);
     res.status(500).json({ message: 'Server error' });
   }
 };
+
+export const getAllReactionStatus = async (req, res) => {
+  const { bookId } = req.query;
+  if (!bookId) {
+    return res.status(400).json({ message: 'Missing bookId' });
+  }
+
+  try {
+    const totalReactions = await Reaction.countDocuments({ bookId });
+    res.status(200).json({ totalReactions });
+  } catch (error) {
+    console.error('Error getting reaction status:', error.message);
+    res.status(500).json({ message: 'Server error' });
+  }
+}
 
