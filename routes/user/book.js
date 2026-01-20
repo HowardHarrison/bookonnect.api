@@ -1,5 +1,5 @@
 import express from 'express';
-import { getBookById, getBooks, getSavedBooksById } from '../controllers/book.js';
+import { getBookById, getBooks, getSavedBooksById } from '../../controllers/user/book.js';
 const router = express.Router();
 
 router.get('/', getBooks);

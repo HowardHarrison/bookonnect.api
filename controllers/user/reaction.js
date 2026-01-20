@@ -1,4 +1,4 @@
-import Reaction from '../models/Reaction.js';
+import Reaction from '../../models/Reaction.js';
 
 export const toggleReaction = async (req, res) => {
   const { userId, bookId } = req.body;

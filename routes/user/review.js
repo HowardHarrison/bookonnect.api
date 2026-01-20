@@ -4,7 +4,7 @@ import {
   getReviewsByBook,
   getUserReview,
   deleteReview,
-} from '../controllers/review.js';
+} from '../controllers/uer/review.js';
 
 const router = express.Router();
 

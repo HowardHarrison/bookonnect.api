@@ -1,7 +1,7 @@
 import express from "express";
-import { getUserById, toggleSavedBook, updateUserData } from '../controllers/user.js';
-import { verifyToken } from "../middleware/auth.js";
-import upload from "../middleware/multer.js";
+import { getUserById, toggleSavedBook, updateUserData } from '../../controllers/user/user.js';
+import { verifyToken } from "../../middleware/auth.js";
+import upload from "../../middleware/multer.js";
 
 const router = express.Router();
 

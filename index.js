@@ -14,11 +14,11 @@ import { books, categories, writers } from "./data/index.js";
 import Category from "./models/Category.js";
 import Book from "./models/Book.js";
 import { seedUser } from "./data/user.js";
-import bookRoutes from './routes/book.js'
-import authRoutes from './routes/auth.js'
+import bookRoutes from './routes/user/book.js'
+import authRoutes from './routes/user/auth.js'
 import reactionRoutes from './routes/reaction.js'
 import reviewRoutes from './routes/review.js'
-import userRoutes from './routes/user.js'
+import userRoutes from './routes/user/user.js'
 import Reaction from "./models/Reaction.js";
 import { reaction } from "./data/reaction.js";
 import Review from "./models/Review.js";
