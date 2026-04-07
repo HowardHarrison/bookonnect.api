@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { ReviewEntity } from '../../domain/entities/review.entity';
-import { ReviewRepository } from '../../domain/repositories/review.repository';
+import { ReviewEntity } from '@domain/review/entities/review.entity';
+import { ReviewRepository } from '@domain/review/repositories/review.repository';
 import { ReviewDocument, ReviewModel } from '../schemas/review.schema';
 
 @Injectable()

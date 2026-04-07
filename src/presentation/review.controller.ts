@@ -1,10 +1,10 @@
 import { Body, Controller, Delete, Get, Param, Post, Query } from '@nestjs/common';
-import { ReviewQueryDto } from '../../application/dtos/review-query.dto';
-import { UpsertReviewDto } from '../../application/dtos/upsert-review.dto';
-import { DeleteReviewUseCase } from '../../application/use-cases/delete-review.use-case';
-import { GetReviewsByBookUseCase } from '../../application/use-cases/get-reviews-by-book.use-case';
-import { GetUserReviewUseCase } from '../../application/use-cases/get-user-review.use-case';
-import { UpsertReviewUseCase } from '../../application/use-cases/upsert-review.use-case';
+import { ReviewQueryDto } from '../core/application/review/dtos/review-query.dto';
+import { UpsertReviewDto } from '../core/application/review/dtos/upsert-review.dto';
+import { DeleteReviewUseCase } from '../core/application/review/use-cases/delete-review.use-case';
+import { GetReviewsByBookUseCase } from '../core/application/review/use-cases/get-reviews-by-book.use-case';
+import { GetUserReviewUseCase } from '../core/application/review/use-cases/get-user-review.use-case';
+import { UpsertReviewUseCase } from '../core/application/review/use-cases/upsert-review.use-case';
 
 @Controller('reviews')
 export class ReviewController {

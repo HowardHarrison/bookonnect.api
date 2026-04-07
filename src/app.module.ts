@@ -5,7 +5,7 @@ import { AdminModule } from './core/infrastructure/admin/admin.module';
 import { AuthModule } from './core/infrastructure/auth/auth.module';
 import { BookModule } from './core/infrastructure/book/book.module';
 import { ReactionModule } from './core/infrastructure/reaction/reaction.module';
-import { ReviewModule } from './modules/review/review.module';
+import { ReviewModule } from './core/infrastructure/review/review.module';
 import { UserModule } from './modules/user/user.module';
 
 @Module({

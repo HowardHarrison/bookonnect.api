@@ -1,4 +1,4 @@
-import { ReviewEntity } from '../entities/review.entity';
+import { ReviewEntity } from '@domain/review/entities/review.entity';
 
 export const REVIEW_REPOSITORY = Symbol('REVIEW_REPOSITORY');
 
