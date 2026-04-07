@@ -1,10 +1,10 @@
 import { Body, Controller, Get, Post, Query } from '@nestjs/common';
-import { AllReactionStatusDto } from '../../application/dtos/all-reaction-status.dto';
-import { ReactionStatusDto } from '../../application/dtos/reaction-status.dto';
-import { ToggleReactionDto } from '../../application/dtos/toggle-reaction.dto';
-import { GetAllReactionStatusUseCase } from '../../application/use-cases/get-all-reaction-status.use-case';
-import { GetReactionStatusUseCase } from '../../application/use-cases/get-reaction-status.use-case';
-import { ToggleReactionUseCase } from '../../application/use-cases/toggle-reaction.use-case';
+import { AllReactionStatusDto } from '../core/application/reaction/dtos/all-reaction-status.dto';
+import { ReactionStatusDto } from '../core/application/reaction/dtos/reaction-status.dto';
+import { ToggleReactionDto } from '../core/application/reaction/dtos/toggle-reaction.dto';
+import { GetAllReactionStatusUseCase } from '../core/application/reaction/use-cases/get-all-reaction-status.use-case';
+import { GetReactionStatusUseCase } from '../core/application/reaction/use-cases/get-reaction-status.use-case';
+import { ToggleReactionUseCase } from '../core/application/reaction/use-cases/toggle-reaction.use-case';
 
 @Controller('reactions')
 export class ReactionController {

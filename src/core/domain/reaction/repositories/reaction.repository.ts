@@ -1,4 +1,4 @@
-import { ReactionEntity } from '../entities/reaction.entity';
+import { ReactionEntity } from '@domain/reaction/entities/reaction.entity';
 
 export const REACTION_REPOSITORY = Symbol('REACTION_REPOSITORY');
 

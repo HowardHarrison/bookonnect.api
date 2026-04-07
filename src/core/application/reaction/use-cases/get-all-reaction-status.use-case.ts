@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@nestjs/common';
 import {
   REACTION_REPOSITORY,
   ReactionRepository,
-} from '../../domain/repositories/reaction.repository';
+} from '@domain/reaction/repositories/reaction.repository';
 
 @Injectable()
 export class GetAllReactionStatusUseCase {

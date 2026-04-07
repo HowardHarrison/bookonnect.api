@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { ReactionEntity } from '../../domain/entities/reaction.entity';
-import { ReactionRepository } from '../../domain/repositories/reaction.repository';
+import { ReactionEntity } from '@domain/reaction/entities/reaction.entity';
+import { ReactionRepository } from '@domain/reaction/repositories/reaction.repository';
 import { ReactionDocument, ReactionModel } from '../schemas/reaction.schema';
 
 @Injectable()
