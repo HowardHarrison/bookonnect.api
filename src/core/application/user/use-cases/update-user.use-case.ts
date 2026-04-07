@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
 import * as bcrypt from 'bcrypt';
-import { USER_REPOSITORY, UserRepository } from '../../domain/repositories/user.repository';
+import { USER_REPOSITORY, UserRepository } from '@domain/user/repositories/user.repository';
 
 @Injectable()
 export class UpdateUserUseCase {

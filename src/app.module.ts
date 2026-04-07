@@ -6,7 +6,7 @@ import { AuthModule } from './core/infrastructure/auth/auth.module';
 import { BookModule } from './core/infrastructure/book/book.module';
 import { ReactionModule } from './core/infrastructure/reaction/reaction.module';
 import { ReviewModule } from './core/infrastructure/review/review.module';
-import { UserModule } from './modules/user/user.module';
+import { UserModule } from './core/infrastructure/user/user.module';
 
 @Module({
   imports: [
