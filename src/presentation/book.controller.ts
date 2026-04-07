@@ -1,7 +1,7 @@
 import { Controller, Get, Param, Query } from '@nestjs/common';
-import { GetBookByIdUseCase } from '../../application/use-cases/get-book-by-id.use-case';
-import { GetBooksUseCase } from '../../application/use-cases/get-books.use-case';
-import { GetSavedBooksUseCase } from '../../application/use-cases/get-saved-books.use-case';
+import { GetBookByIdUseCase } from '../core/application/book/use-cases/get-book-by-id.use-case';
+import { GetBooksUseCase } from '../core/application/book/use-cases/get-books.use-case';
+import { GetSavedBooksUseCase } from '../core/application/book/use-cases/get-saved-books.use-case';
 
 @Controller('books')
 export class BookController {

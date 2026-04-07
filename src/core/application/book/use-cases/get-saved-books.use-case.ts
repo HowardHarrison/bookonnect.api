@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { Types } from 'mongoose';
-import { BOOK_REPOSITORY, BookRepository } from '../../domain/repositories/book.repository';
+import { BOOK_REPOSITORY, BookRepository } from '@domain/book/repositories/book.repository';
 
 @Injectable()
 export class GetSavedBooksUseCase {

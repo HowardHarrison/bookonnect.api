@@ -1,5 +1,5 @@
 import { Inject, Injectable, NotFoundException } from '@nestjs/common';
-import { BOOK_REPOSITORY, BookRepository } from '../../domain/repositories/book.repository';
+import { BOOK_REPOSITORY, BookRepository } from '@domain/book/repositories/book.repository';
 
 @Injectable()
 export class GetBookByIdUseCase {

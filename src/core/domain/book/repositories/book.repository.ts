@@ -1,4 +1,4 @@
-import { BookEntity } from '../entities/book.entity';
+import { BookEntity } from '@domain/book/entities/book.entity';
 
 export const BOOK_REPOSITORY = Symbol('BOOK_REPOSITORY');
 

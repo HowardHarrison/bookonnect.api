@@ -1,7 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { HydratedDocument, Types } from 'mongoose';
 import { UserModel } from '../../../auth/infrastructure/schemas/user.schema';
-import { BookModel } from '../../../book/infrastructure/schemas/book.schema';
+import { BookModel } from '../../../../core/infrastructure/schemas/book.schema';
 
 export type ReactionDocument = HydratedDocument<ReactionModel>;
 
