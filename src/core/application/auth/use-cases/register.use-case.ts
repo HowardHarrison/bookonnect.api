@@ -5,7 +5,7 @@ import { sign } from 'jsonwebtoken';
 import {
   USER_AUTH_REPOSITORY,
   UserAuthRepository,
-} from '../../domain/repositories/user-auth.repository';
+} from '@domain/auth/repositories/user-auth.repository';
 
 @Injectable()
 export class RegisterUseCase {

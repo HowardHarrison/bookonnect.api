@@ -1,4 +1,4 @@
-import { AdminEntity } from '../entities/admin.entity';
+import { AdminEntity } from '../../../../core/domain/admin/entities/admin.entity';
 
 export const ADMIN_REPOSITORY = Symbol('ADMIN_REPOSITORY');
 

@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { UserAuthEntity } from '../../domain/entities/user-auth.entity';
-import { UserAuthRepository } from '../../domain/repositories/user-auth.repository';
+import { UserAuthEntity } from '@domain/auth/entities/user-auth.entity';
+import { UserAuthRepository } from '@domain/auth/repositories/user-auth.repository';
 import { UserDocument, UserModel } from '../schemas/user.schema';
 
 @Injectable()

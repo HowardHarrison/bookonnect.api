@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { DatabaseModule } from './infrastructure/database/database.module';
-import { AdminModule } from './modules/admin/admin.module';
-import { AuthModule } from './modules/auth/auth.module';
+import { DatabaseModule } from './core/infrastructure/database/database.module';
+import { AdminModule } from './core/infrastructure/admin/admin.module';
+import { AuthModule } from './core/infrastructure/auth/auth.module';
 import { BookModule } from './modules/book/book.module';
 import { ReactionModule } from './modules/reaction/reaction.module';
 import { ReviewModule } from './modules/review/review.module';

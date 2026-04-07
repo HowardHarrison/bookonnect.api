@@ -1,5 +1,5 @@
 import { Body, Controller, Post } from '@nestjs/common';
-import { AdminLoginDto } from '../../application/dtos/admin-login.dto';
+import { AdminLoginDto } from '../core/application/admin/dtos/admin-login.dto';
 import { AdminLoginUseCase } from '../../application/use-cases/admin-login.use-case';
 
 @Controller('admin')

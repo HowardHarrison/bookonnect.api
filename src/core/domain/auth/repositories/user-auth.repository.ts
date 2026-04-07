@@ -1,4 +1,4 @@
-import { UserAuthEntity } from '../entities/user-auth.entity';
+import { UserAuthEntity } from '@domain/auth/entities/user-auth.entity';
 
 export const USER_AUTH_REPOSITORY = Symbol('USER_AUTH_REPOSITORY');
 

@@ -11,7 +11,7 @@ import {
 } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { AuthGuard } from '../../../../common/guards/auth.guard';
-import { imageUploadOptions } from '../../../../infrastructure/files/multer.config';
+import { imageUploadOptions } from '../../../../core/infrastructure/files/multer.config';
 import { ToggleSavedBookDto } from '../../application/dtos/toggle-saved-book.dto';
 import { UpdateUserDto } from '../../application/dtos/update-user.dto';
 import { GetUserByIdUseCase } from '../../application/use-cases/get-user-by-id.use-case';

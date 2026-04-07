@@ -2,9 +2,9 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AdminLoginUseCase } from './application/use-cases/admin-login.use-case';
 import { ADMIN_REPOSITORY } from './domain/repositories/admin.repository';
-import { MongooseAdminRepository } from './infrastructure/repositories/mongoose-admin.repository';
-import { AdminModel, AdminSchema } from './infrastructure/schemas/admin.schema';
-import { AdminController } from './web/controllers/admin.controller';
+import { MongooseAdminRepository } from '../repositories/mongoose-admin.repository';
+import { AdminModel, AdminSchema } from '../schemas/admin.schema';
+import { AdminController } from '../../../presentation/admin.controller';
 
 @Module({
   imports: [

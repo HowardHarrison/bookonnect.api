@@ -6,11 +6,11 @@ import {
   UseInterceptors,
 } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { imageUploadOptions } from '../../../../infrastructure/files/multer.config';
-import { LoginDto } from '../../application/dtos/login.dto';
-import { RegisterDto } from '../../application/dtos/register.dto';
-import { LoginUseCase } from '../../application/use-cases/login.use-case';
-import { RegisterUseCase } from '../../application/use-cases/register.use-case';
+import { LoginDto } from '../core/application/auth/dtos/login.dto';
+import { RegisterDto } from '../core/application/auth/dtos/register.dto';
+import { LoginUseCase } from '../core/application/auth/use-cases/login.use-case';
+import { RegisterUseCase } from '../core/application/auth/use-cases/register.use-case';
+import { imageUploadOptions } from '../core/infrastructure/files/multer.config';
 
 @Controller()
 export class AuthController {
