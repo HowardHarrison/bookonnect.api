@@ -1,6 +1,5 @@
 import express from 'express';
-import { toggleReaction, getReactionStatus, getAllReactionStatus } from '../controllers/user/reaction.js';
-
+import { toggleReaction, getReactionStatus, getAllReactionStatus } from '../../controllers/user/reaction.js';
 const router = express.Router();
 
 router.post('/', toggleReaction);

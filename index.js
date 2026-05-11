@@ -16,8 +16,8 @@ import Book from "./models/Book.js";
 import { seedUser } from "./data/user.js";
 import bookRoutes from './routes/user/book.js'
 import authRoutes from './routes/user/auth.js'
-import reactionRoutes from './routes/reaction.js'
-import reviewRoutes from './routes/review.js'
+import reactionRoutes from './routes/user/reaction.js'
+import reviewRoutes from './routes/user/review.js'
 import userRoutes from './routes/user/user.js'
 import Reaction from "./models/Reaction.js";
 import { reaction } from "./data/reaction.js";
@@ -55,8 +55,8 @@ mongoose.connect(process.env.MONGO_URL)
     // Writer.insertMany(writers);
     // Category.insertMany(categories);
     // Book.insertMany(books);
-    //Reaction.insertMany(reaction);
-    //Review.insertMany(review);
+    // Reaction.insertMany(reaction);
+    // Review.insertMany(review);
     // await seedUser();
   })
   .catch((error) => console.log(`${error} did not connect`));    
